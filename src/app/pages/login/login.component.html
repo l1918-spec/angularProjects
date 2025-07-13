@@ -20,6 +20,7 @@
       <label for="email">Email</label>
       <input
         type="email"
+        [(ngModel)]="loginObj.username"
         id="email"
         placeholder="name@company.com"
         autocomplete="email"
@@ -31,6 +32,7 @@
       <label for="password">Password</label>
       <input
         type="password"
+        [(ngModel)]="loginObj.password"
         id="password"
         placeholder="Enter your password"
         autocomplete="current-password"
@@ -46,8 +48,8 @@
       <a href="#" class="forgot-password">Forgot password?</a>
     </div>
 
-    <button type="submit" class="login-btn" id="loginButton">
-      Sign in
+    <button type="submit"  (click)="onLogin( )"   class="login-btn" id="loginButton">
+      Login
     </button>
   </form>
 
